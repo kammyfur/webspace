@@ -1,0 +1,15 @@
+body *, body, #loader, #home, #about, #settings {
+    overflow: hidden !important;
+}
+
+#loader, #home, #about, #settings, .menu, #titlebar {
+    display: none !important;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+* {
+    cursor: default;
+}

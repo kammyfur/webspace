@@ -1,0 +1,138 @@
+{
+    "$name": "Français",
+    "decorations": {
+        "home": "Accueil"
+    },
+    "descriptions": {
+        "pinpages": "Réseau social respectueux de la vie privée",
+        "official": "Site officiel de Minteck Projects",
+        "projectpedia": "Réseau social de partage et de collaboration sur de multiples projets",
+	    "globalwiki": "Projet qui consiste à grouper plusieurs wikis externes en un seul gros wiki",
+        "tysonfans": "Groupe de fans ayant pour objectif de rendre hommage à Tyson Tan pour son travail remarquable",
+        "bettersearch": "Moteur de recherche intelligent et optimisé 100% français",
+        "mpcms": "Logiciel permettant de créer vos propres sites Web facilement et rapidement",
+        "nature": "Projet d'écologie pour les particuliers",
+        "bugs": "Signalez et corrigez des bugs concernant les différents services de Minteck Projects"
+    },
+    "warnings": {
+        "restart": {
+            "title": "Redémarrage requis",
+            "message": "Vous devez redémarrer l'application pour que les nouveaux paramètres soient appliqués.",
+            "yes": "Redémarrer maintenant",
+            "no": "Plus tard"
+        },
+        "debug": {
+            "title": "Attacher un débogueur",
+            "message": "Vous devez maintenant attacher un débogueur à l'application. Appuyez sur Ctrl+Maj+I pour ouvrir le débogueur intégré.",
+            "messagemac": "Vous devez maintenant attacher un débogueur à l'application. Appuyez sur Cmd+Maj+I pour ouvrir le débogueur intégré."
+        },
+        "ddebug": {
+            "title": "Débogage",
+            "message": "Débogueur détaché de l'application. L'application va maintenant redémarrer dans #",
+            "sec1": " secondes.",
+            "sec2": " seconde."
+        },
+        "adebug": {
+            "title": "Débogage",
+            "message": "Débogueur attaché à l'application. Exécutez la fonction continueSetup pour poursuivre le démarrage normal."
+        },
+        "exit": {
+            "title": "Quitter ",
+            "message": [
+                "Si vous quittez ",
+                " maintenant, vous serez déconnecté de votre compte si vous vous êtes connecté, et vous perdrez les changements non sauvegardés. Voulez-vous continuer ?"
+            ],
+            "yes": "Oui",
+            "no": "Non"
+        },
+        "external": {
+            "title": " redirige vers un site externe",
+            "message": [
+                " essaye de vous rediriger vers un site externe. Vous pouvez l'ouvrir dans votre navigateur par défaut si vous pensez que ce site est sûr, ou annuler et rester sur ",
+                ""
+            ],
+            "yes": "Ouvrir dans le navigateur par défaut",
+            "no": "Annuler"
+        },
+        "offline": {
+            "title": "Impossible de se connecter",
+            "message": "Soit le site auquel vous tentez d'accéder est temporairement indisponible, soit votre appareil n'est pas connecté à Internet. Vérifiez la connexion à Internet, l'état des services de Minteck Projects, et si vous utilisez un serveur mandataire ou un réseau privé virtuel, vérifiez qu'il autorise la connexion au site demandé.",
+            "ok": "Fermer"
+        },
+        "update": {
+            "title": "Mise à jour disponible",
+            "message": "Une mise à jour est disponible pour cette application, accédez au site de Minteck Projects pour retélécharger l'assistant d'installation. Nous rappelons que utiliser une ancienne version de l'application Minteck Projects peut exposer votre appareil à d'importants problèmes de sécurité, et peut vous empêcher d'accéder aux sites tant que vous ne mettez pas à jour l'application.",
+            "messageFiles": "Une mise à jour est disponible pour cette application, accédez au site de Minteck Projects pour télécharger les fichiers depuis les dépôts. Nous rappelons que utiliser une ancienne version de l'application Minteck Projects peut exposer votre appareil à d'importants problèmes de sécurité, et peut vous empêcher d'accéder aux sites tant que vous ne mettez pas à jour l'application.",
+            "ok": "Fermer"
+        }
+    },
+    "loading": {
+        "init": "Initialisation...",
+	    "fonts": "En attente des polices...",
+        "js": "Chargement des scripts...",
+        "settings": "Lecture des paramètres...",
+        "setuppg": "Chargement des paramètres...",
+        "meta": "Chargement des métadonnées...",
+        "perms": "Vérification des permissions...",
+        "int": "Vérification de l'intégrité...",
+        "updates": "Recherche de mises à jour...",
+        "style": "Chargement des feuilles de style...",
+        "ui": "Chargement de l'interface...",
+        "debug": "En attente du débogueur",
+        "adebug": "Débogueur attaché",
+        "langlist": "Actualisation de la liste des langues...",
+        "confgen": "Génération de la configuration..."
+    },
+    "bettersearch": {
+        "placeholder": "Rechercher sur BetterSearch"
+    },
+    "settingshome": {
+        "title": "Préférences",
+        "desc": "Modifiez les paramètres de l'application afin de personnaliser votre expérience"
+    },
+    "abouthome": {
+        "title": "À propos",
+        "desc": "Obtenez des informations sur l'application"
+    },
+    "about": {
+        "for": "pour",
+        "nonofficial": "(support non officiel)",
+	    "power": "propulsé par WebSpace:render ",
+        "id": "Identifiant d'installation :",
+        "idschema": "Schéma de l'identifiant d'installation :",
+        "version": "version",
+        "updates": "Une nouvelle version de l'application est disponible, exécutez de nouveau l'assistant d'installation pour l'installer.",
+        "updatesFiles": "Une nouvelle version de l'application est disponible, téléchargez les fichiers depuis le dépôt pour l'installer.",
+        "copyright": [
+            "Minteck Projects WebSpace Desktop, un client natif pour les sites de Minteck Projects",
+            "Copyright © Minteck Projects",
+            "",
+            "Ce logiciel est un logiciel libre : vous pouvez le redistribuer et/ou le modifier sous les termes de la licence publique générale GNU comme publiée par la Free Software Foundation, soit la version 3 de la licence, ou (comme vous le souhaitez) n'importe quelle version postérieure."
+        ]
+    },
+    "loadetc": {
+        "artwork": "Artwork par Jared Brashier",
+        "free": "Ce logiciel est un logiciel gratuit. Si vous avez payé pour l'obtenir, vous êtes victime d'une arnaque et vous devez demander un remboursement...",
+        "copyright": "Ce logiciel est un logiciel libre : vous pouvez le redistribuer et/ou le modifier sous les termes de la licence publique générale GNU comme publiée par la Free Software Foundation, soit la version 3 de la licence, ou (comme vous le souhaitez) n'importe quelle version postérieure."
+    },
+    "settings": {
+        "title": "Paramètres de WebSpace Desktop",
+        "autosave": "Les paramètres sont sauvegardés automatiquement, vous devez relancer l'application pour les appliquer",
+        "telemetry-title": "Télémétrie",
+        "telemetry-desc": "Autorise la collecte de données statistiques anonymes ainsi que des rapports d'erreur afin d'améliorer l'application et les performances.",
+        "gpu-title": "Accélération matérielle",
+        "gpu-desc": "Utilise votre processeur graphique pour afficher des effets de flou dans l'application. L'activation de ces effets peut avoir un impact important sur les performances de votre appareil ou rendre l'application instable.",
+        "debug-title": "Mode développeur",
+        "debug-desc": "Affiche des outils supplémentaires dans le menu « Édition », affiche des informations de débogage à l'écran et attend l'attachement d'un débogueur avant de continuer.",
+        "lang": "Langue de l'application :"
+    },
+    "snapcraft": {
+        "aboutUpdates": "Une nouvelle version de l'application est disponible, accédez au Snap Store pour l'installer.",
+        "startUpdates": "Une mise à jour est disponible pour cette application, accédez au Snap Store pour l'installer automatiquement. Nous rappelons que utiliser une ancienne version de l'application Minteck Projects peut exposer votre appareil à d'importants problèmes de sécurité, et peut vous empêcher d'accéder aux sites tant que vous ne mettez pas à jour l'application."
+    },
+    "tutorial": {
+        "pc": "Pointez sur (ou touchez) la barre de titre pour afficher le menu de l'application",
+        "mac": "Pointez sur la barre de titre pour afficher le menu de l'application",
+        "ok": "Compris !"
+    }
+}

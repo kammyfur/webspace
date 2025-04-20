@@ -1,0 +1,59 @@
+#tutorial {
+    background: rgba(0, 0, 0, .5);
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#tutorial-message {
+    color: white;
+    position: fixed;
+    top: 40px;
+    left: 25px;
+    width: 167px;
+    text-align: center;
+    z-index: 999999;
+}
+
+#tutorial-circle {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, .25);
+    border: lightskyblue 3px solid;
+    border-radius: 999px;
+    position: fixed;
+    left: 80px;
+    top: -10px;
+    z-index: 999999;
+}
+
+#tutorial-ok {
+    padding: 10px 20px;
+    background-color: rgb(13, 158, 206);
+    border-radius: 5px;
+    transition: background-color 200ms, border-color 200ms;
+    border-color: rgba(8, 91, 119, 0);
+    border-width: 3px;
+    border-style: solid;
+    position: fixed;
+    top: 110px;
+    left: 62px;
+}
+
+#tutorial-ok:hover {
+    background-color: rgb(11, 118, 153);
+    border-color: rgba(8, 91, 119, .5);
+}
+
+#tutorial-ok:active {
+    background-color: rgb(8, 91, 119);
+    border-color: rgba(8, 91, 119, .75);
+}
+
+#content {
+    z-index: 99;
+}

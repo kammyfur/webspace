@@ -1,0 +1,52 @@
+.titlebar {
+    font-family: system-ui, system, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    transition: 200ms;
+    padding: initial 20px !important;
+    height: 24px !important;
+    color: white;
+}
+
+.window-icon-bg {
+    margin: 8px 2px !important;
+}
+
+.window-icon-bg.window-close-bg {
+    margin-left: 10px !important;
+}
+
+.container-after-titlebar {
+    top: 24px !important;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+* {
+    cursor: default;
+}
+
+input::selection, textarea::selection {
+    background-color: rgba(0, 88, 160, .25) !important;
+}
+
+html,body {
+    background: #333;
+    color: whitesmoke;
+}
+
+.quote {
+    border-left-color: #666;
+    border-left-width: 5px;
+    border-left-style: solid;
+    padding-left: 10px;
+}

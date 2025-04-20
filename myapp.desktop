@@ -1,0 +1,23 @@
+[Desktop Entry]
+Comment[fr_FR]=Application officielle pour accéder aux services de Minteck Projects
+Comment[fr]=Application officielle pour accéder aux services de Minteck Projects
+Comment=Official app to access Minteck Projects' website
+Comment[en_US]=Official app to access Minteck Projects' website
+Comment[en]=Official app to access Minteck Projects' website
+Exec=AppRun
+GenericName[fr_FR]=Client Web
+GenericName[fr]=Client Web
+GenericName[en_US]=Web Frontend
+GenericName[en]=Web Frontend
+GenericName=Web Frontend
+Icon=myapp
+Name=Minteck Projects
+Path=myapp
+StartupNotify=true
+Terminal=false
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+Categories=Network;X-Web;X-Minteck Projects;WebBrowser;

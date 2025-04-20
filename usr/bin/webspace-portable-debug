@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo -e "\nDebugger listening on port 9222\n\nUse Google Chrome/Chromium instance to debug this app\n\n--------\n\n"
+
+#../share/webspace/node_modules/electron/dist/electron --inspect=9222 ../share/webspace
+oldroot=$PWD
+cd ../share/webspace
+./node_modules/electron/dist/electron --inspect=9222 .
+cd "$oldroot"

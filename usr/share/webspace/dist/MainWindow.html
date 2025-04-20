@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script>const { remote } = require('electron');</script>
+    <script>remote.getCurrentWindow().resizable = false;</script>
+    <script>remote.getCurrentWindow().center();</script>
+    <script src="./ErrorReporting.js"></script>
+    <script src="./LanguageProcessor.js"></script>
+    <script src="./AppLoading.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minteck Projects</title>
+    <link rel="stylesheet" href="./Fonts.css">
+    <link rel="stylesheet" href="./Loader.css">
+    <link rel="stylesheet" href="./LoaderTempDefs.css">
+    <script>const $ = require('jquery');</script>
+</head>
+<body>
+    <div id="menu-file" class="menu" data-pushbar-id="menu-file" data-pushbar-direction="left">
+        <span class="menu-title" id="menu-file-title"><script>document.write(lang.menus.file["@"]);</script></span>
+        <span data-pushbar-close class="menu-close" id="menu-file-close"><img src="../res/titlebar/close.svg" alt="Icon not found" class="menu-close-icon"></span>
+
+        <a data-pushbar-close onclick="openApp('pinpages')" title="PinPages" class="home-element"><div class="home-element-inner">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="../res/applogos/pinpages.svg" class="home-logo"></td>
+                        <td>
+                            <b class="home-title">PinPages</b><br>
+                            <span class="home-description"><script>document.write(lang.descriptions.pinpages);</script></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div></a>
+        <a data-pushbar-close onclick="openApp('official')" title="Minteck Projects™" class="home-element"><div class="home-element-inner">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="../res/logo.svg" class="home-logo"></td>
+                        <td>
+                            <b class="home-title">Minteck Projects</b><br>
+                            <span class="home-description"><script>document.write(lang.descriptions.official);</script></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div></a>
+        <a data-pushbar-close onclick="openApp('tysonfans')" title="Tyson Fans" class="home-element"><div class="home-element-inner">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="../res/applogos/tysonfans.svg" class="home-logo"></td>
+                        <td>
+                            <b class="home-title">Tyson Fans</b><br>
+                            <span class="home-description"><script>document.write(lang.descriptions.tysonfans);</script></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div></a>
+        <a data-pushbar-close onclick="betterSearch()" title="BetterSearch" class="home-element"><div class="home-element-inner">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="../res/applogos/bettersearch.svg" class="home-logo"></td>
+                        <td>
+                            <b class="home-title">BetterSearch</b><br>
+                            <span class="home-description"><script>document.write(lang.descriptions.bettersearch);</script></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div></a>
+        <a data-pushbar-close onclick="openApp('mpcms')" title="CMS" class="home-element"><div class="home-element-inner">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="../res/applogos/mpcms.svg" class="home-logo"></td>
+                        <td>
+                            <b class="home-title">Minteck Projects CMS</b><br>
+                            <span class="home-description"><script>document.write(lang.descriptions.mpcms);</script></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div></a>
+        <a data-pushbar-close onclick="openApp('bugs')" title="Bugs" class="home-element"><div class="home-element-inner">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="../res/applogos/bugs.svg" class="home-logo"></td>
+                        <td>
+                            <b class="home-title">Minteck Projects Bugs</b><br>
+                            <span class="home-description"><script>document.write(lang.descriptions.bugs);</script></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div></a>
+    </div>
+
+    <div id="loader-app">
+        <span id="loader-app-left">
+            <img id="loader-app-img" src="../res/logo.svg" alt="..."><br>
+            <p id="loader-app-dev">WebSpace Desktop</p>
+            <p id="loader-app-title">Minteck Projects</p>
+            <p id="loader-app-progress"><script>document.write(lang.loading.init);</script></p>
+            <p id="loader-app-credits">
+                Copyright © Minteck Projects<br>
+                <script>document.write(lang.loadetc.artwork);</script><br><br>
+                <script>document.write(lang.loadetc.copyright);</script><br><br>
+                <script>document.write(lang.loadetc.free);</script><br><br>
+                <script>document.write(lang.about.version);</script> <script>document.write(require('../package.json').version);</script>
+            </p>
+            <img src="../res/aboutapp.svg" alt="WebSpace" id="loader-app-serie">
+            <script src="./AppLoading.js"></script>
+        </span>
+        <span id="loader-app-right">
+            <span id="loader-artwork"></span>
+        </span>
+    </div>
+
+    <div id="warning-debug" class="warning hide">
+        <div id="warning-debug-inner" class="warning-inner">
+            <h2 id="warning-debug-title" class="warning-title"><script>document.write(lang.warnings.debug.title);</script></h2>
+            <p id="warning-debug-message" class="warning-message"><script>if(require('os').platform!="darwin"){document.write(lang.warnings.debug.message);}else{document.write(lang.warnings.debug.messagemac);}</script></p>
+        </div>
+    </div>
+
+    <div id="warning-ddebug" class="warning hide">
+        <div id="warning-ddebug-inner" class="warning-inner">
+            <h2 id="warning-ddebug-title" class="warning-title"><script>document.write(lang.warnings.ddebug.title);</script></h2>
+            <p id="warning-ddebug-message" class="warning-message"><script>document.write(lang.warnings.ddebug.message.replace("#", "10")+lang.warnings.ddebug.sec1);</script></p>
+        </div>
+    </div>
+
+    <div id="warning-adebug" class="warning hide">
+        <div id="warning-adebug-inner" class="warning-inner">
+            <h2 id="warning-adebug-title" class="warning-title"><script>document.write(lang.warnings.adebug.title);</script></h2>
+            <p id="warning-adebug-message" class="warning-message"><script>document.write(lang.warnings.adebug.message);</script></p>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="menubar">
+            <div id="menubar-content-home">
+                <script>document.write(lang.decorations.home);</script>
+            </div>
+            <div id="menubar-content-app" class="hide">
+                <img onclick="bthQuit()" id="menubar-app-quit" class="bright" src="../res/quit.svg" width="24px" height="24px" alt="X">
+                <img onclick="backToHome()" id="menubar-app-back" class="bright" src="../res/back.svg" width="24px" height="24px" alt="&lt;-">
+                <span id="menubar-app-title">{appname}</span>
+            </div>
+            <div id="menubar-content-settings" class="hide">
+                <img onclick="bthSettings()" id="menubar-app-back" class="bright" src="../res/back.svg" width="24px" height="24px" alt="&lt;-">
+                <span id="menubar-app-title"><script>document.write(lang.settingshome.title);</script></span>
+            </div>
+            <div id="menubar-content-about" class="hide">
+                <img onclick="bthAbout()" id="menubar-app-back" class="bright" src="../res/back.svg" width="24px" height="24px" alt="&lt;-">
+                <span id="menubar-app-title"><script>document.write(lang.abouthome.title);</script></span>
+            </div>
+        </div>
+    
+        <div id="tutorial">
+            <span id="tutorial-circle"></span>
+            <span id="tutorial-message"><script>if(require('os').platform!="darwin"){document.write(lang.tutorial.pc);}else{document.write(lang.tutorial.mac);}</script></span>
+            <button id="tutorial-ok" onclick="$('#tutorial').fadeOut(200);"><script>document.write(lang.tutorial.ok);</script></button>
+        </div>
+
+        <div id="home">
+            TODO: Mettre une barre de recherche avec les applications récentes et compter le temps passé sur chaque site.
+        </div>
+        <!-- <div id="home">
+            <a onclick="openApp('pinpages')" title="PinPages" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/applogos/pinpages.svg" class="home-logo"></td>
+                            <td>
+                                <b>PinPages</b><br>
+                                <script>document.write(lang.descriptions.pinpages);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+            <a onclick="openApp('official')" title="Minteck Projects™" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/logo.svg" class="home-logo"></td>
+                            <td>
+                                <b>Minteck Projects™</b><br>
+                                <script>document.write(lang.descriptions.official);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+            <a onclick="openApp('tysonfans')" title="Tyson Fans" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/applogos/tysonfans.svg" class="home-logo"></td>
+                            <td>
+                                <b>Tyson Fans</b><br>
+                                <script>document.write(lang.descriptions.tysonfans);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+            <a onclick="betterSearch()" title="BetterSearch" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/applogos/bettersearch.svg" class="home-logo"></td>
+                            <td>
+                                <b>BetterSearch</b><br>
+                                <script>document.write(lang.descriptions.bettersearch);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+            <a onclick="openApp('mpcms')" title="CMS" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/applogos/mpcms.svg" class="home-logo"></td>
+                            <td>
+                                <b>Minteck Projects CMS</b><br>
+                                <script>document.write(lang.descriptions.mpcms);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+            <a onclick="openApp('globalwiki')" title="GlobalWiki" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/applogos/globalwiki.png" class="home-logo"></td>
+                            <td>
+                                <b>GlobalWiki</b><br>
+                                <script>document.write(lang.descriptions.globalwiki);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+            <a onclick="openApp('bugs')" title="Bugs" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/applogos/bugs.svg" class="home-logo"></td>
+                            <td>
+                                <b>Minteck Projects Bugs</b><br>
+                                <script>document.write(lang.descriptions.bugs);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+            <hr class="list-separator">
+            <a onclick="openSettings()" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/settings.svg" class="home-logo bright"></td>
+                            <td>
+                                <b><script>document.write(lang.settingshome.title);</script></b><br>
+                                <script>document.write(lang.settingshome.desc);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+            <a onclick="openAbout()" class="home-element"><div class="home-element-inner">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="../res/about.svg" class="home-logo bright"></td>
+                            <td>
+                                <b><script>document.write(lang.abouthome.title);</script></b><br>
+                                <script>document.write(lang.abouthome.desc);</script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></a>
+        </div> -->
+    
+        <div id="app-pinpages" class="hide browser-outer">
+            <webview onclick="view.focus()" class="browser" id="app-pinpages-webview" src="about:blank"></webview>
+        </div>
+        <div id="app-official" class="hide browser-outer">
+            <webview onclick="view.focus()" class="browser" id="app-official-webview" src="about:blank"></webview>
+        </div>
+        <div id="app-tysonfans" class="hide browser-outer">
+            <webview onclick="view.focus()" class="browser" id="app-tysonfans-webview" src="about:blank"></webview>
+        </div>
+        <div id="app-bettersearch" class="hide browser-outer">
+            <div id="bettersearch-wrapper">
+                <center id="bettersearch-inline">
+                    <img src="../res/applogos/bettersearch.svg" alt="B" id="bettersearch-logo">
+                    <input type="text" id="bettersearch-search">
+                    <script>document.getElementById('bettersearch-search').placeholder = lang.bettersearch.placeholder</script>
+                    <img onclick="betterSearchSearch(document.getElementById('bettersearch-search').value, document.getElementById('bettersearch-inline'), document.getElementById('bettersearch-loader'))" src="../res/search.svg" alt="Q" id="bettersearch-go" class="bright">
+                </center>
+                <center id="bettersearch-loader" class="hide">
+                    <img id="bettersearch-loader-img" src="../res/loader.svg" alt="...">
+                </center>
+            </div>
+        </div>
+        <div id="app-mpcms" class="hide browser-outer">
+            <webview onclick="view.focus()" class="browser" id="app-mpcms-webview" src="about:blank"></webview>
+        </div>
+        <div id="app-globalwiki" class="hide browser-outer">
+            <webview onclick="view.focus()" class="browser" id="app-globalwiki-webview" src="about:blank"></webview>
+        </div>
+        <div id="app-projectpedia" class="hide browser-outer">
+            <webview onclick="view.focus()" class="browser" id="app-projectpedia-webview" src="about:blank"></webview>
+        </div>
+        <div id="app-bugs" class="hide browser-outer">
+            <webview onclick="view.focus()" class="browser" id="app-bugs-webview" src="about:blank"></webview>
+        </div>
+    
+        <div id="settings" class="hide">
+            <center><span id="settings-header"><img src="../res/settings.svg" class="bright" id="settings-header-img"> <script>document.write(lang.settings.title);</script></span></center>
+            <br><br>
+            <p><script>document.write(lang.settings.autosave);</script></p>
+            <p><span><label class="switch"><input id="settings-telemetry" type="checkbox" onchange="saveSettings()"><span class="slider round"></span></label> <script>document.write(lang.settings["telemetry-title"]);</script></span></p>
+            <p class="quote"><script>document.write(lang.settings["telemetry-desc"]);</script></p>
+            <p><span><label class="switch"><input id="settings-blur" type="checkbox" onchange="saveSettings()"><span class="slider round"></span></label> <script>document.write(lang.settings["gpu-title"]);</script></span></p>
+            <p class="quote"><script>document.write(lang.settings["gpu-desc"]);</script></p>
+            <p><span><label class="switch"><input id="settings-debug" type="checkbox" onchange="saveSettings()"><span class="slider round"></span></label> <script>document.write(lang.settings["debug-title"]);</script></span></p>
+            <p class="quote"><script>document.write(lang.settings["debug-desc"]);</script></p>
+    
+            <p><script>document.write(lang.settings.lang);</script> <select onchange="saveSettings()" id="settings-lang"></select></p>
+        </div>
+    
+        <div id="about" class="hide">
+            <div id="about-inner"><center>
+                <img src="../res/aboutapp.svg" alt="WebSpace" id="about-img"><br>
+                <p>
+                    <b>Minteck Projects WebSpace Desktop</b><br>
+                    <script>document.write(lang.about.for);</script> <script>if (require('os').platform() == "linux") { document.write("GNU/Linux"); };if (require('os').platform() == "win32") { document.write("Windows"); };if (require('os').platform() == "darwin") { document.write("macOS " + lang.about.nonofficial); };if (require('os').platform() == "aix") { document.write("AIX " + lang.about.nonofficial); };if (require('os').platform() == "freebsd") { document.write("FreeBSD " + lang.about.nonofficial); };if (require('os').platform() == "openbsd") { document.write("OpenBSD " + lang.about.nonofficial); };if (require('os').platform() == "sunos") { document.write("Sun OS " + lang.about.nonofficial); };if (require('os').platform() == "android") { document.write("Android " + lang.about.nonofficial); };</script>
+                    <br><br>
+                    <b><script>document.write(lang.about.id);</script></b> <textarea lines="1" style="resize:none;width:90%;" id="about-id" disabled></textarea>
+                    <script>os=require('os');document.getElementById('about-id').value = os.cpus()[0].model.split(" ").join("").split("-").join("").split("+").join("").split(",").join("").split(".").join("") + "::" + os.totalmem() + "::" + os.freemem() + "::" + os.platform().toUpperCase() + "::" + os.arch().toUpperCase() + "::" + os.release().toUpperCase().split(" ").join("").split("-").join("").split("+").join("").split(",").join("").split(".").join("") + "::" + os.tmpdir() + "::" + os.uptime() + "::" + process.versions.node.toUpperCase() + "::" + process.pid + "::" + process.versions.v8.toUpperCase();os=undefined;</script>
+                    <br><br>
+                    <b><script>document.write(lang.about.idschema);</script></b> <textarea lines="1" style="resize:none;width:90%;" id="about-id" disabled>CpuModel::TotalMemory::FreeMemory::Platform::CpuArch::SystemVersion::TemporaryFilesDir::Uptime::NodeVersion::V8Version</textarea>
+                    <br><br>
+                    <script>document.write(lang.about.version);</script> <script>document.write(require('../package.json').version);</script><br>
+                    <script>document.write(lang.about.power);</script> <script>document.write(require('electron').remote.getCurrentWindow().uaVersion);</script>
+                    <span id="about-updates"></span>
+                    <p><script>document.write(lang.about.copyright.join("<br>"));</script></p><br>
+                    <script>document.write(lang.loadetc.free);</script>
+                </p>
+            </center></div>
+        </div>
+    
+        <div id="loader" class="hide">
+            <center id="loader-inner">
+                <img id="loader-img" src="../res/loader.svg" alt="...">
+            </center>
+        </div>
+    
+        <div id="warning-exit" class="warning hide">
+            <div id="warning-exit-inner" class="warning-inner">
+                <h2 id="warning-exit-title" class="warning-title"><script>document.write(lang.warnings.exit.title);</script><span id="warning-exit-appname1">{appname}</span></h2>
+                <p id="warning-exit-message" class="warning-message"><script>document.write(lang.warnings.exit.message[0]);</script><span id="warning-exit-appname2">{appname}</span><script>document.write(lang.warnings.exit.message[1]);</script></p>
+                <span id="warning-exit-buttons" class="warning-buttons">
+                    <a onclick="exitConfirm()" id="warning-exit-button-yes" class="warning-button"><script>document.write(lang.warnings.exit.yes);</script></a>
+                    <a onclick="closeWarning(this);" id="warning-exit-button-no" class="warning-button"><script>document.write(lang.warnings.exit.no);</script></a>
+                </span>
+            </div>
+        </div>
+    
+        <div id="warning-exitquit" class="warning hide">
+            <div id="warning-exitquit-inner" class="warning-inner">
+                <h2 id="warning-exitquit-title" class="warning-title"><script>document.write(lang.warnings.exit.title);</script><span id="warning-exitquit-appname1">{appname}</span></h2>
+                <p id="warning-exitquit-message" class="warning-message"><script>document.write(lang.warnings.exit.message[0]);</script><span id="warning-exitquit-appname2">{appname}</span><script>document.write(lang.warnings.exit.message[1]);</script></p>
+                <span id="warning-exitquit-buttons" class="warning-buttons">
+                    <a onclick="remote.getCurrentWindow().close()" id="warning-exitquit-button-yes" class="warning-button"><script>document.write(lang.warnings.exit.yes);</script></a>
+                    <a onclick="closeWarning(this);" id="warning-exitquit-button-no" class="warning-button"><script>document.write(lang.warnings.exit.no);</script></a>
+                </span>
+            </div>
+        </div>
+    
+        <div id="warning-external" class="warning hide">
+            <div id="warning-external-inner" class="warning-inner">
+                <h2 id="warning-external-title" class="warning-title"><span id="warning-external-appname1">{appname}</span><script>document.write(lang.warnings.external.title);</script></h2>
+                <p id="warning-external-message" class="warning-message"><span id="warning-external-appname3">{appname}</span><script>document.write(lang.warnings.external.message[0]);</script><span id="warning-external-appname3">{appname}</span><script>document.write(lang.warnings.external.message[1]);</script></p>
+                <span id="warning-external-buttons" class="warning-buttons">
+                    <a onclick="redirectConfirm()" id="warning-external-button-yes" class="warning-button"><script>document.write(lang.warnings.external.yes);</script></a>
+                    <a onclick="closeWarning(this);;blur(false);" id="warning-external-button-no" class="warning-button"><script>document.write(lang.warnings.external.no);</script></a>
+                </span>
+            </div>
+        </div>
+    
+        <div id="warning-offline" class="warning hide">
+            <div id="warning-offline-inner" class="warning-inner">
+                <h2 id="warning-offline-title" class="warning-title"><script>document.write(lang.warnings.offline.title);</script></h2>
+                <p id="warning-offline-message" class="warning-message"><script>document.write(lang.warnings.offline.message);</script></p>
+                <span id="warning-offline-buttons" class="warning-buttons">
+                    <a onclick="closeWarning(this);" id="warning-offline-button-confirm" class="warning-button"><script>document.write(lang.warnings.offline.ok);</script></a>
+                </span>
+            </div>
+        </div>
+    
+        <div id="warning-restart" class="warning hide">
+            <div id="warning-restart-inner" class="warning-inner">
+                <h2 id="warning-restart-title" class="warning-title"><script>document.write(lang.warnings.restart.title);</script></h2>
+                <p id="warning-restart-message" class="warning-message"><script>document.write(lang.warnings.restart.message);</script></p>
+                <span id="warning-restart-buttons" class="warning-buttons">
+                    <a onclick="closeWarning(this);" id="warning-restart-button-confirm" class="warning-button"><script>document.write(lang.warnings.restart.no);</script></a>
+                    <a onclick="remote.app.relaunch();remote.app.exit();" id="warning-restart-button-confirm" class="warning-button"><script>document.write(lang.warnings.restart.yes);</script></a>
+                </span>
+            </div>
+        </div>
+    
+        <div id="warning-update-win32" class="warning hide">
+            <div id="warning-update-win32-inner" class="warning-inner">
+                <h2 id="warning-update-win32-title" class="warning-title"><script>document.write(lang.warnings.update.title);</script></h2>
+                <p id="warning-update-win32-message" class="warning-message"><script>document.write(lang.warnings.update.message);</script></p>
+                <span id="warning-update-win32-buttons" class="warning-buttons">
+                    <a onclick="closeWarning(this);" id="warning-update-win32-button-confirm" class="warning-button"><script>document.write(lang.warnings.update.ok);</script></a>
+                </span>
+            </div>
+        </div>
+    
+        <div id="warning-update-linux" class="warning hide">
+            <div id="warning-update-linux-inner" class="warning-inner">
+                <h2 id="warning-update-linux-title" class="warning-title"><script>document.write(lang.warnings.update.title);</script></h2>
+                <p id="warning-update-linux-message" class="warning-message"><script>document.write(lang.snapcraft.startUpdates);</script></p>
+                <span id="warning-update-linux-buttons" class="warning-buttons">
+                    <a onclick="closeWarning(this);" id="warning-update-linux-button-confirm" class="warning-button"><script>document.write(lang.warnings.update.ok);</script></a>
+                </span>
+            </div>
+        </div>
+    
+        <div id="warning-update-other" class="warning hide">
+            <div id="warning-update-other-inner" class="warning-inner">
+                <h2 id="warning-update-other-title" class="warning-title"><script>document.write(lang.warnings.update.title);</script></h2>
+                <p id="warning-update-other-message" class="warning-message"><script>document.write(lang.warnings.update.messageFiles);</script></p>
+                <span id="warning-update-other-buttons" class="warning-buttons">
+                    <a onclick="closeWarning(this);" id="warning-update-other-button-confirm" class="warning-button"><script>document.write(lang.warnings.update.ok);</script></a>
+                </span>
+            </div>
+        </div>
+    
+        <div id="blur-overlay"></div>
+    </div>
+
+    <div id="titlebar">
+        <a onclick="tbClose()" class="titlebar-button" id="titlebar-close">
+            <img src="../res/titlebar/close.svg" alt="Icon not found" width="18px" height="18px">
+        </a>
+        <a onclick="tbToggleMax()" class="titlebar-button" id="titlebar-maximize-restore">
+            <img src="../res/titlebar/maximize.svg" alt="Icon not found" width="18px" height="18px">
+        </a>
+        <a onclick="tbMinimize()" class="titlebar-button" id="titlebar-minimize">
+            <img src="../res/titlebar/minimize.svg" alt="Icon not found" width="18px" height="18px">
+        </a>
+
+        <span id="titlebar-menu">
+            <span class="titlebar-menu-item" id="titlebar-menu-file" data-pushbar-target="menu-file"><script>document.write(lang.menus.file["@"]);</script></span>
+            <span class="titlebar-menu-item" id="titlebar-menu-edit"><script>document.write(lang.menus.edit["@"]);</script></span>
+            <span class="titlebar-menu-item" id="titlebar-menu-window"><script>document.write(lang.menus.window["@"]);</script></span>
+            <span class="titlebar-menu-item" id="titlebar-menu-help"><script>document.write(lang.menus.help["@"]);</script></span>
+        </span>
+        <span id="titlebar-title">
+            Minteck Projects
+        </span>
+    </div>
+
+    <webview class="hide" id="shadow-webview" src="about:blank"></webview>
+</body>
+</html>

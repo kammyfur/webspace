@@ -1,0 +1,15 @@
+prime/webspace.log
+prime/bootstrap/installer.iss
+prime/bootstrap/debprj.dbp
+prime/bootstrap/Output
+*.dbp
+*.iss
+*.code-workspace
+*.snap
+parts
+parts/my-part/build
+parts/my-part/src
+parts/webspace-kernel/build
+parts/webspace-kernel/src
+*.xdelta3
+*~

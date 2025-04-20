@@ -1,0 +1,93 @@
+#loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-app-region: drag;
+}
+
+#loader * {
+    -webkit-app-region: drag;
+}
+
+#loader-inner {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+#loader-artwork {
+    width: 100%;
+    height: 100%;
+    background-image: url(../res/verartwork.jpg);
+    background-size: contain;
+    background-size: 60vw;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+
+#loader-app {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0057a0;
+    color: white;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+#loader-app-img {
+    width: 64px;
+    height: 64px;
+}
+
+#loader-app-left {
+    background: #79110d;
+    padding: 30px;
+}
+
+#loader-app-right {
+    background: #5f0c0a;
+}
+
+#loader-app-title {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+#loader-app-progress {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+#loader-app-dev {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#loader-app-credits {
+    font-size: 10px;
+}
+
+#loader-img {
+    width: 64px;
+}
+
+#loader-app-serie {
+    width: 28px;
+    /* position: absolute;
+    bottom: 0; */
+}

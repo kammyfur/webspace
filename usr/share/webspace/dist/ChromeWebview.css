@@ -1,0 +1,7 @@
+.browser {
+    height: 100%;
+}
+
+.browser-outer {
+    height: calc(100% - 44px);
+}

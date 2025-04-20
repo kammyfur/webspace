@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /usr/share/webspace
+/usr/share/webspace/linux

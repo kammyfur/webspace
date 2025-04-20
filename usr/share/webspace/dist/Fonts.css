@@ -1,0 +1,93 @@
+* {
+    font-family: "Ubuntu", system-ui, system, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+@font-face {
+    src: url("../fonts/normal-normal.ttf");
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    src: url("../fonts/normal-italic.ttf");
+    font-family: "Ubuntu";
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    src: url("../fonts/bold-normal.ttf");
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    src: url("../fonts/bold-italic.ttf");
+    font-family: "Ubuntu";
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    src: url("../fonts/medium-normal.ttf");
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    src: url("../fonts/medium-italic.ttf");
+    font-family: "Ubuntu";
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    src: url("../fonts/light-normal.ttf");
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    src: url("../fonts/light-italic.ttf");
+    font-family: "Ubuntu";
+    font-style: italic;
+    font-weight: 300;
+}
+
+@font-face {
+    src: url("../fonts/thin-normal.ttf");
+    font-family: "Ubuntu";
+    font-weight: 100;
+}
+
+@font-face {
+    src: url("../fonts/mono-normal.ttf");
+    font-family: "Ubuntu Mono";
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    src: url("../fonts/mono-italic.ttf");
+    font-family: "Ubuntu Mono";
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    src: url("../fonts/mono-bold.ttf");
+    font-family: "Ubuntu Mono";
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    src: url("../fonts/mono-bitalic.ttf");
+    font-family: "Ubuntu Mono";
+    font-style: italic;
+    font-weight: 700;
+}

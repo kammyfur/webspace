@@ -1,0 +1,59 @@
+{
+    "default": {
+        "color": "#79110d"
+    },
+    "pinpages": {
+        "main": "https://pinpages.alwaysdata.net",
+        "match": "//pinpages.alwaysdata.net/",
+        "common": "PinPages",
+        "color": "#406DCF"
+    },
+    "official": {
+        "main": "https://minteck-projects.alwaysdata.net",
+        "match": "//minteck-projects.alwaysdata.net/",
+        "common": "Minteck Projects™",
+        "color": "#0400A2"
+    },
+    "tysonfans": {
+        "main": "http://tyson-fans.rf.gd",
+        "match": "//tyson-fans.rf.gd/",
+        "common": "Tyson Fans",
+        "color": "#46718E"
+    },
+    "bettersearch": {
+        "main": "https://better-search.000webhostapp.com",
+        "match": "//better-search.000webhostapp.com/",
+        "common": "BetterSearch",
+        "color": "#1B1B1B"
+    },
+    "globalwiki": {
+        "main": "https://globalwiki.alwaysdata.net",
+        "match": "//globalwiki.alwaysdata.net/",
+        "common": "GlobalWiki",
+        "color": "#373737"
+    },
+    "mpcms": {
+        "main": "http://mpcms.rf.gd",
+        "match": "//mpcms.rf.gd/",
+        "common": "Minteck Projects CMS",
+        "color": "#0083C5"
+    },
+    "projectpedia": {
+        "main": "https://projectpedia.alwaysdata.net",
+        "match": "//projectpedia.alwaysdata.net/",
+        "common": "Projectpédia",
+        "color": "#3400C5"
+    },
+    "nature": {
+        "main": "http://nature.mpcms.rf.gd",
+        "match": "//nature.mpcms.rf.gd/",
+        "common": "Minteck Projects Nature",
+        "color": "#6B1C00"
+    },
+    "bugs": {
+        "main": "https://mpbugger.alwaysdata.net",
+        "match": "//mpbugger.alwaysdata.net/",
+        "common": "Minteck Projects Bugs",
+        "color": "#404040"
+    }
+}

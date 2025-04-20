@@ -1,0 +1,57 @@
+.home-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.home-element-inner {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 200ms;
+    padding: 5px;
+}
+
+.home-element-inner {
+    margin-left: -50px;
+    margin-right: -50px;
+    padding: 2px 20px;
+}
+
+.home-element-inner:hover {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+.home-element-inner:active {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#home, #settings, #about {
+    position: fixed;
+    top: 68px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+*:focus {
+    outline: none;
+}
+
+.list-separator {
+    border-top: none;
+    border-bottom-color: #777;
+}
+
+.home-description {
+    display: none;
+    font-size: 12px;
+}
+
+.home-title {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.home-element:hover .home-description {
+    display: inline;
+}

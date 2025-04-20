@@ -1,0 +1,71 @@
+#bettersearch-wrapper {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+#bettersearch-logo {
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#bettersearch-search {
+    border: none;
+    border-radius: 999px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    padding: 10px 20px;
+    cursor: text;
+    width: 30%;
+    transition: border-color 200ms;
+}
+
+#bettersearch-search::placeholder {
+    color: gray;
+    opacity: 1;
+    transition: color 200ms;
+}
+
+#bettersearch-search:hover {
+    border-color: rgb(94, 94, 94);
+}
+
+#bettersearch-search:hover::placeholder {
+    color: rgb(94, 94, 94);
+}
+
+#bettersearch-search:active, #bettersearch-search:focus {
+    border-color: rgb(54, 54, 54);
+}
+
+#bettersearch-search:active::placeholder, #bettersearch-search:focus::placeholder {
+    color: rgb(54, 54, 54);
+}
+
+#bettersearch-go {
+    width: 24px;
+    opacity: 1;
+    vertical-align: middle;
+    margin-left: 10px;
+    transition: opacity 200ms;
+}
+
+#bettersearch-go:hover {
+    opacity: .75;
+}
+
+#bettersearch-go:active {
+    opacity: .5;
+}
+
+#bettersearch-loader-img {
+    width: 48px;
+    filter: brightness(25%);
+}

@@ -1,0 +1,152 @@
+{
+    "$name": "English",
+    "decorations": {
+        "home": "Home"
+    },
+    "descriptions": {
+        "pinpages": "Privacy respectful social network",
+        "official": "Minteck Projects' official website (french)",
+        "projectpedia": "Multiple projects sharing and collaboration network (french)",
+	    "globalwiki": "Project that groups multiple external wiki into one big",
+        "tysonfans": "Fans group that want to give support to Tyson Tan for his hard work (french)",
+        "bettersearch": "Optimized and smart search engine",
+        "mpcms": "Software to help beginners making their own websites fast and without any knowledge (french)",
+        "nature": "Ecology and nature protection project (french)",
+        "bugs": "Report and fix bugs about Minteck Projects' different services"
+    },
+    "warnings": {
+        "restart": {
+            "title": "Restart Required",
+            "message": "Your need to restart the app to apply the new settings.",
+            "yes": "Restart Now",
+            "no": "Later"
+        },
+        "debug": {
+            "title": "Attach Debugger",
+            "message": "You must now attach a debugger to the app. Press Ctrl+Shift+I to open the internal debugger.",
+            "messagemac": "You must now attach a debugger to the app. Press Cmd+Shift+I to open the internal debugger."
+        },
+        "ddebug": {
+            "title": "Debugging",
+            "message": "Debugger detached from app. The app will now restart in #",
+            "sec1": " seconds.",
+            "sec2": " second."
+        },
+        "adebug": {
+            "title": "Debugging",
+            "message": "Debugger attached to app. Run the continueSetup function to continue normal startup."
+        },
+        "exit": {
+            "title": "Quit ",
+            "message": [
+                "If you quit ",
+                " now, you'll be disconnected if you're connected to an account, and you'll lose any unsaved changes. Are you sure to continue?"
+            ],
+            "yes": "Yes",
+            "no": "No"
+        },
+        "external": {
+            "title": " redirects to an external website",
+            "message": [
+                " tries to redirect you to an external website. You can open it in your default browser if you think it's safe, or cancel and continue on ",
+                ""
+            ],
+            "yes": "Open in default browser",
+            "no": "Cancel"
+        },
+        "offline": {
+            "title": "Unable to connect",
+            "message": "Either the website you try to access is temporarily unavailable, or your device isn't connected to Internet. Check your Internet connection, Minteck Projects services status, and if you use a proxy server or a virtual private network, check that it allows to connect to this website.",
+            "ok": "Close"
+        },
+        "update": {
+            "title": "Update available",
+            "message": "An update is available for this software, go to Minteck Projects' website to download the new install wizard. We remind you that using an old version of the Minteck Projects app can expose your device to important security issues, and may prevent you from accessing the websites if you won't update the app.",
+            "messageFiles": "An update is available for this software, go to Minteck Projects' website to download files from the repository. We remind you that using an old version of the Minteck Projects app can expose your device to important security issues, and may prevent you from accessing the websites if you won't update the app.",
+            "ok": "Close"
+        }
+    },
+    "loading": {
+	    "fonts": "Waiting for fonts...",
+        "init": "Preloading...",
+        "js": "Loading Scripts...",
+        "settings": "Reading Settings...",
+        "setuppg": "Loading Settings...",
+        "meta": "Loading Metadata...",
+        "perms": "Checking for Permissions...",
+        "int": "Checking Integrity...",
+        "updates": "Fetching Updates...",
+        "style": "Loading Style Sheets...",
+        "ui": "Loading UI...",
+        "debug": "Waiting for Debugger",
+        "adebug": "Debugger Attached",
+        "langlist": "Refreshing Language List...",
+        "confgen": "Generating Configuration..."
+    },
+    "bettersearch": {
+        "placeholder": "Search BetterSearch"
+    },
+    "settingshome": {
+        "title": "Settings",
+        "desc": "Change application configuration to customize your experience"
+    },
+    "abouthome": {
+        "title": "About",
+        "desc": "Get info about the application"
+    },
+    "about": {
+        "for": "for",
+        "nonofficial": "(unofficial support)",
+	    "power": "powered by WebSpace:render ",
+        "id": "Install ID:",
+        "idschema": "Install ID Schema:",
+        "version": "version",
+        "updates": "A new app version is available, run the install wizard to install it.",
+        "updatesFiles": "A new app version is available, download the files from the repository to install it.",
+        "copyright": [
+            "Minteck Projects WebSpace Desktop, a native app to access Minteck Projects websites",
+            "Copyright © Minteck Projects",
+            "",
+            "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version."
+        ]
+    },
+    "loadetc": {
+        "artwork": "Artwork by Jared Brashier",
+        "free": "This software isn't a paid software. If you paid to get it, you got scam and need to ask a refund...",
+        "copyright": "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version."
+    },
+    "settings": {
+        "title": "WebSpace Desktop settings",
+        "autosave": "Settings are saved automatically, you'll need to restart the app to apply new settings",
+        "telemetry-title": "Telemetry",
+        "telemetry-desc": "Allow collecting anonymous statistics and error reports to improve the app and the performance.",
+        "gpu-title": "Hardware Acceleration",
+        "gpu-desc": "Use your GPU to show blur effects in the app. Enabling this can have significant performance impact or make the app unstable.",
+        "debug-title": "Developer Mode",
+        "debug-desc": "Shows additional tools is the « Edit » menu, shows debugging details on the screen and waits for a debugger to attach to continue.",
+        "lang": "App Language:"
+    },
+    "snapcraft": {
+        "aboutUpdates": "A new app version is available, go to the Snap Store to install it.",
+        "startUpdates": "An update is available for this software, go to the Snap Store to automatically install it. We remind you that using an old version of the Minteck Projects app can expose your device to important security issues, and may prevent you from accessing the websites while you won't update the app."
+    },
+    "tutorial": {
+        "pc": "Hover on (or touch) the title bar to show application menu",
+        "mac": "Hover on the title bar to show application menu",
+        "ok": "Got it!"
+    },
+    "menus": {
+        "file": {
+            "@": "File"
+        },
+        "edit": {
+            "@": "Edit"
+        },
+        "window": {
+            "@": "Window"
+        },
+        "help": {
+            "@": "Help"
+        }
+    }
+}

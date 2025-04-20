@@ -1,0 +1,5 @@
+#!/bin/bash
+oldroot=$PWD
+cd /span/webspace-desktop/current/usr/share/webspace
+./node_modules/electron/dist/electron .
+cd "$oldroot"

@@ -1,0 +1,29 @@
+.titlebar {
+    transition: background-color 200ms;
+}
+
+#menubar {
+    transition: background-color 200ms;
+}
+
+.titlebar, #menubar, .browser, #home, #app-bettersearch {
+    filter: none;
+    transition: filter 200ms;
+}
+
+.blur {
+    filter: blur(3px) !important;
+}
+
+#blur-overlay {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.bright {
+    filter: brightness(200%);
+}
